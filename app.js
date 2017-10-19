@@ -8,26 +8,20 @@ let window = null
 app.once('ready', () => {
   // Create a new window
   window = new BrowserWindow({
-    // Set the initial width to 400px
-    width: 400,
-    // Set the initial height to 500px
-    height: 500,
-    // Don't show the window until it ready, this prevents any white flickering
+    width: 600,
+    height: 250,
     show: false,
-    // Don't allow the window to be resized.
-    resizable: false,
+    resizable: true,
   })
 
-  // Load a URL in the window to the local index.html path
   window.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
 
-  // Show window when page is ready
   window.once('ready-to-show', () => {
     window.show()
-    window.openDevTools()
+//  window.openDevTools()
   })
 })
