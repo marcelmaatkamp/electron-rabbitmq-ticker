@@ -1,4 +1,6 @@
-Display the contents of an exchange in RabbitMQ in a ticker.
+Display the contents of an exchange in RabbitMQ with a ticker.
+
+<img src="https://raw.githubusercontent.com/marcelmaatkamp/electron-rabbitmq-ticker/master/images/screenshot.png" height="300" />
 
 ## Build and start (debug) application
 
