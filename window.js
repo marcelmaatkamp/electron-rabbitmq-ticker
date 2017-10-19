@@ -1,6 +1,16 @@
 // Run this function after the page has loaded
 $(() => {
 
+ var clock = $('.your-clock').FlipClock({
+  clockFace: 'Counter',
+  onStart: function() {
+  },
+  onStop: function() {
+  },
+  onReset: function() {
+  }
+ });
+
  let Winston = require('winston');
  Winston.remove(Winston.transports.Console);
  const log = new Winston.Logger({
@@ -19,7 +29,7 @@ $(() => {
  queue.bind(topic, '*');
 
  queue.activateConsumer((message) => {
-  log.info(message.getContent());
+  clock.increment()
   $('#message').text(message.getContent())
   message.ack();
  });
