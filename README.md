@@ -1,4 +1,4 @@
-Simple RabbitMQ Electron Application to display messages send to a topic exchange 'input' in RabbitMQ.
+Display the contents of an exchange in RabbitMQ in a ticker.
 
 ## Build and start (debug) application
 
