@@ -1,0 +1,8 @@
+html, body, .container-fluid {
+  height: 100%;
+}
+
+.message {
+  padding-right: 5px;
+}
+
