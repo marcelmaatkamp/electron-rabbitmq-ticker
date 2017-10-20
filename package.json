@@ -17,8 +17,8 @@
   "dependencies": {
     "amqp-ts": "1.4.0",
     "convict": "^3.0.0",
-    "winston": "^2.4.0",
-    "flipclock": "0.7.8"
+    "flipclock": "0.7.8",
+    "winston": "^2.4.0"
   },
   "postinstall": "electron-builder install-app-deps"
 }
