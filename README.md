@@ -1,12 +1,15 @@
-Display the contents of an exchange in RabbitMQ with a ticker.
+Display the contents of the topic exchange 'input' in RabbitMQ with a ticker dispaying the number of messages received.
 
 <img src="https://raw.githubusercontent.com/marcelmaatkamp/electron-rabbitmq-ticker/master/images/screenshot.png" height="300" />
 
 # Binaries
 
- * Windows https://github.com/marcelmaatkamp/electron-rabbitmq-ticker/raw/master/dist/Electron-RabbitMQ-Ticker%20Setup%201.0.0.exe
+| OS        | Filename          |
+| ------------- |:-------------|
+| Wndows      | [Electron-RabbitMQ-Ticker Setup 1.0.0.exe](raw/master/dist/Electron-RabbitMQ-Ticker%20Setup%201.0.0.exe) |
+| MacOSX      | [Electron-RabbitMQ-Ticker-1.0.0.dmg](raw/master/dist/Electron-RabbitMQ-Ticker-1.0.0.dmg) |
+| Linux      | []() |
 
- * MacOSX https://github.com/marcelmaatkamp/electron-rabbitmq-ticker/raw/master/dist/Electron-RabbitMQ-Ticker-1.0.0.dmg
 
 # Build
 
