@@ -15,13 +15,20 @@ app.once('ready', () => {
   })
 
   window.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
+    pathname: path.join(__dirname, '../html/index.html'),
     protocol: 'file:',
     slashes: true
   }))
 
+  function createWindow () {
+    mainWindow.on('closed', function () {
+       mainWindow = null
+    })
+    require('./menu/mainmenu')
+  }
+
   window.once('ready-to-show', () => {
     window.show()
-//  window.openDevTools()
   })
+
 })
