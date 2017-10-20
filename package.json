@@ -1,10 +1,10 @@
 {
-  "name": "Electron-RabbitMQ-Ticker",
+  "name": "rabbitmq-ticker",
   "version": "1.0.2",
   "description": "Display the contents of an exchange in RabbitMQ in a ticker",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcelmaatkamp/electron-rabbitmqi-ticker.git"
+    "url": "https://github.com/marcelmaatkamp/electron-rabbitmq-ticker.git"
   },
   "license": "MIT",
   "main": "app.js",
@@ -14,7 +14,8 @@
   "scripts": {
     "start": "electron --inspect=5858 app.js",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "publish": "electron-builder --publish"
   },
   "devDependencies": {
     "electron": "^1.4.12",
@@ -25,7 +26,8 @@
     "amqp-ts": "1.4.0",
     "convict": "^3.0.0",
     "flipclock": "0.7.8",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "electron": "^1.4.12"
   },
   "postinstall": "electron-builder install-app-deps",
   "build": {

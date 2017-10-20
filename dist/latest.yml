@@ -1,7 +1,7 @@
 version: 1.0.2
-releaseDate: '2017-10-20T08:40:40.809Z'
+releaseDate: '2017-10-20T12:28:21.329Z'
 path: Electron-RabbitMQ-Ticker Setup 1.0.2.exe
 sha512: >-
-  rPQP4XHA465zt5l7gRqeIHGTxRo9m6gG523Y2CWDR11t0V0GA5QbaICDaaRy6dgN5mrTkmOEIQDyXmDakVXziQ==
-sha2: 601c4cbdb6b2eb0d759e8cbe76c80cc003e8f6510889921a89c65efdf4e8ee61
+  yvYHoROUEQ0Z0TwfpkIOZ7nziYqkXH0AEFUosQpH35gLBLaW9BUIlcMpHUBlLRBhzMnLCRRRBbTdrmvUO3MbEg==
+sha2: 92b888ef1d8bdcff7794710a0c5995c77e8f6043bbe960b05dff5b271018fd74
 githubArtifactName: Electron-RabbitMQ-Ticker-Setup-1.0.2.exe
