@@ -1,12 +1,23 @@
-const {app, BrowserWindow} = require('electron') // http://electron.atom.io/docs/api
-const path = require('path')         // https://nodejs.org/api/path.html
-const url = require('url')           // https://nodejs.org/api/url.html
+const {app, BrowserWindow} = require('electron')
+const path = require('path')
+const url = require('url')
+const settings = require('electron-settings')
 
 let window = null
 
 // Wait until the app is ready
 app.once('ready', () => {
-  // Create a new window
+
+settings.set('rabbitmq', {
+   url: 'amqp://rabbitmq',
+   exchange_name: 'input',
+   exchange_type: 'topic'
+
+ });
+
+ settings.get('rabbitmq.url')
+ settings.has('rabbitmq.url')
+
   window = new BrowserWindow({
     width: 600,
     height: 250,

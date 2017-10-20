@@ -1,6 +1,9 @@
 // Run this function after the page has loaded
 $(() => {
 
+const settings = require('electron-settings')
+
+
  var clock = $('.your-clock').FlipClock({
   clockFace: 'Counter',
   onStart: function() {
@@ -22,7 +25,9 @@ $(() => {
   ]
  });
  var amqp = require('amqp-ts');
- 
+
+ log.info("connecting to " + settings.get('rabbitmq.url') + ".exchange("+settings.get('rabbitmq.exchange_name')+").type("+settings.get('rabbitmq.exchange_type')+")")
+
  var connection = new amqp.Connection("amqp://guest:guest@rabbitmq");
  var topic = new amqp.Exchange(connection, "input", "topic", {durable: true, internal: false});
  var queue = connection.declareQueue('', {exclusive: true});
