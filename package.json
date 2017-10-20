@@ -2,8 +2,14 @@
   "name": "Electron-RabbitMQ-Ticker",
   "version": "1.0.2",
   "description": "Display the contents of an exchange in RabbitMQ in a ticker",
-  "repository": "marcelmaatkamp/electron-rabbitmqi-ticker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcelmaatkamp/electron-rabbitmqi-ticker.git"
+  },
   "main": "app.js",
+  "author": "Marcel Maatkamp m.maatkamp@gmail.com>",
+  "copyright": "© 2017, Marcel Maatkamp",
+  "homepage": "https://github.com/marcelmaatkamp/electron-rabbitmq-ticker",
   "scripts": {
     "start": "electron --inspect=5858 app.js",
     "pack": "electron-builder --dir",

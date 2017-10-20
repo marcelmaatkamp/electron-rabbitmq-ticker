@@ -8,15 +8,14 @@ let window = null
 // Wait until the app is ready
 app.once('ready', () => {
 
-settings.set('rabbitmq', {
-   url: 'amqp://rabbitmq',
-   exchange_name: 'input',
-   exchange_type: 'topic'
+  settings.set('rabbitmq', {
+    url: 'amqp://rabbitmq',
+    exchange_name: 'input',
+    exchange_type: 'topic'
+  });
 
- });
-
- settings.get('rabbitmq.url')
- settings.has('rabbitmq.url')
+  settings.get('rabbitmq.url')
+  settings.has('rabbitmq.url')
 
   window = new BrowserWindow({
     width: 600,
@@ -33,7 +32,7 @@ settings.set('rabbitmq', {
 
   function createWindow () {
     mainWindow.on('closed', function () {
-       mainWindow = null
+      mainWindow = null
     })
     require('js/menu/mainmenu')
   }
