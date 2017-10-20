@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/marcelmaatkamp/electron-rabbitmqi-ticker.git"
   },
+  "license": "MIT",
   "main": "app.js",
   "author": "Marcel Maatkamp m.maatkamp@gmail.com>",
   "copyright": "© 2017, Marcel Maatkamp",
@@ -15,7 +16,6 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
-  "license": "ISC",
   "devDependencies": {
     "electron": "^1.4.12",
     "electron-builder": "^19.37.2",
@@ -27,5 +27,55 @@
     "flipclock": "0.7.8",
     "winston": "^2.4.0"
   },
-  "postinstall": "electron-builder install-app-deps"
+  "postinstall": "electron-builder install-app-deps",
+  "build": {
+    "appId": "RabbitMQ Ticker",
+    "extraResources": [
+      "build/icon.ico"
+    ],
+    "mac": {
+      "bundleVersion": "20",
+      "helperBundleId": "chat.rocket.electron.helper",
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "pkg",
+        "zip",
+        "mas"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "appx": {
+      "backgroundColor": "#2f343d",
+      "displayName": "Rocket.Chat",
+      "publisherDisplayName": "RabbitMQ Ticker",
+      "languages": [
+        "en-US",
+        "en-GB",
+        "pt-BR"
+      ]
+    },
+    "linux": {
+      "desktop": {
+        "Categories": "GNOME;GTK;Network;InstantMessaging"
+      },
+      "target": [
+        "deb",
+        "rpm"
+      ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "marcelmaatkamp",
+        "repo": "electron-rabbitmq-ticker",
+        "vPrefixedTagName": false
+      }
+    ]
+  }
 }
