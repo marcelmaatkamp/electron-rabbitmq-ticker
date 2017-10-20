@@ -6,9 +6,9 @@ Display the contents of the topic exchange 'input' in RabbitMQ with a ticker dis
 
 | OS        | Filename          |
 | ------------- |:-------------|
-| Wndows      | [Electron-RabbitMQ-Ticker Setup 1.0.0.exe](raw/master/dist/Electron-RabbitMQ-Ticker%20Setup%201.0.0.exe) |
+| Windows     | [rabbitmq-ticker-1.0.2.exe](raw/master/releases/rabbitmq-ticker-1.0.2.exe) |
 | MacOSX      | [Electron-RabbitMQ-Ticker-1.0.0.dmg](raw/master/dist/Electron-RabbitMQ-Ticker-1.0.0.dmg) |
-| Linux      | []() |
+| Linux       | []() |
 
 
 # Build
