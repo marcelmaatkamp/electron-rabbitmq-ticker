@@ -23,12 +23,17 @@ To start the application simply type:
  $ npm install && npm start
 ```
 
+Or you like to use yarn:
+
+```
+ $ yarn add electron-builder --dev && yarn start
+```
+
 ## Distribution
 
 This will compile and link the final executable [Electron-RabbitMQ-1.0.0.dmg](https://github.com/marcelmaatkamp/electron-rabbitmq/blob/master/dist/Electron-RabbitMQ-1.0.0.dmg):
 
 ```
- $ yarn add electron-builder --dev
  $ yarn dist
 ```
 

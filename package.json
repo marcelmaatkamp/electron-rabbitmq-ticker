@@ -1,6 +1,6 @@
 {
   "name": "Electron-RabbitMQ-Ticker",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Display the contents of an exchange in RabbitMQ in a ticker",
   "repository": "marcelmaatkamp/electron-rabbitmqi-ticker",
   "main": "app.js",
