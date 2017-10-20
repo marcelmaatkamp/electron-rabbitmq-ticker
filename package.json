@@ -5,7 +5,7 @@
   "repository": "marcelmaatkamp/electron-rabbitmqi-ticker",
   "main": "app.js",
   "scripts": {
-    "start": "electron --inspect=5858 js/app.js",
+    "start": "electron --inspect=5858 app.js",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },

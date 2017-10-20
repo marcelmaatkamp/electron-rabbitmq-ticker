@@ -26,7 +26,7 @@ settings.set('rabbitmq', {
   })
 
   window.loadURL(url.format({
-    pathname: path.join(__dirname, '../html/index.html'),
+    pathname: path.join(__dirname, 'html/index.html'),
     protocol: 'file:',
     slashes: true
   }))
@@ -35,7 +35,7 @@ settings.set('rabbitmq', {
     mainWindow.on('closed', function () {
        mainWindow = null
     })
-    require('./menu/mainmenu')
+    require('js/menu/mainmenu')
   }
 
   window.once('ready-to-show', () => {
