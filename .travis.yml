@@ -12,7 +12,7 @@ matrix:
 
     - os: linux
       services: docker
-      language: generic
+      language: node_js
 
 cache:
   directories:
