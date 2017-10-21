@@ -40,8 +40,17 @@ const template = [
     role: 'help',
     submenu: [
       {
-        label: 'Learn More',
+        label: 'Learn More!',
         click () { require('electron').shell.openExternal('https://electron.atom.io') }
+      },
+      {
+        label: 'Preferences',
+        accelerator: 'Cmd+,',
+        click: () => windows.main.dispatch('preferences')
+      },
+      {
+        label: 'About ' + config.APP_NAME,
+        role: 'about'
       }
     ]
   }

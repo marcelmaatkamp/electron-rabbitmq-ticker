@@ -12,9 +12,11 @@
   "copyright": "© 2017, Marcel Maatkamp",
   "homepage": "https://github.com/marcelmaatkamp/electron-rabbitmq-ticker",
   "scripts": {
-    "start": "electron --inspect=5858 app.js",
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron ./app",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "release": "electron-builder"
   },
   "devDependencies": {
     "electron": "^1.4.12",
@@ -25,6 +27,7 @@
     "amqp-ts": "1.4.0",
     "convict": "^3.0.0",
     "flipclock": "0.7.8",
+    "standard": "^10.0.3",
     "winston": "^2.4.0"
   },
   "postinstall": "electron-builder install-app-deps",
