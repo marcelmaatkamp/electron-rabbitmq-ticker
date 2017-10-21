@@ -37,6 +37,7 @@
       "bundleVersion": "20",
       "helperBundleId": "chat.rocket.electron.helper",
       "category": "public.app-category.productivity",
+      "type": "development",
       "target": [
         "dmg",
         "pkg",
