@@ -41,7 +41,7 @@ script:
         /bin/bash -c "yarn --link-duplicates --pure-lockfile && yarn release --linux --win"
     else
       yarn add electron-builder --dev
-      yarn dist
+      yarn pack
     fi
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
