@@ -3,9 +3,9 @@ const path = require('path')
 const url = require('url')
 const settings = require('electron-settings')
 
-let window = null
+var window = null
 
-// Wait until the app is ready
+// https://github.com/webtorrent/webtorrent-desktop/blob/4a3ca5459da995c15af36952c07701479e69c472/main/windows/main.js
 app.once('ready', () => {
 
   settings.set('rabbitmq', {
@@ -13,9 +13,6 @@ app.once('ready', () => {
     exchange_name: 'input',
     exchange_type: 'topic'
   });
-
-  settings.get('rabbitmq.url')
-  settings.has('rabbitmq.url')
 
   window = new BrowserWindow({
     width: 600,
@@ -34,11 +31,13 @@ app.once('ready', () => {
     mainWindow.on('closed', function () {
       mainWindow = null
     })
-    require('js/menu/mainmenu')
   }
 
   window.once('ready-to-show', () => {
+    require("./js/menu/main")
     window.show()
   })
+
+});
 
 })

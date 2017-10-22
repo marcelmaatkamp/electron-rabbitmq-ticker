@@ -1,16 +1,6 @@
 // Run this function after the page has loaded
-$(() => {  
+$(() => {
   const settings = require('electron-settings')
-
-  var clock = $('.your-clock').FlipClock({
-    clockFace: 'Counter',
-    onStart: function() {
-    },
-    onStop: function() {
-    },
-    onReset: function() {
-    }
-  });
 
   let Winston = require('winston');
   Winston.remove(Winston.transports.Console);
@@ -22,12 +12,25 @@ $(() => {
       })
     ]
   });
+
+
+  var clock = $('.your-clock').FlipClock({
+    clockFace: 'Counter',
+    onStart: function() {
+    },
+    onStop: function() {
+    },
+    onReset: function() {
+    }
+  });
+
+log
   var amqp = require('amqp-ts');
 
-  log.info("connecting to " + settings.get('rabbitmq.url') + ".exchange("+settings.get('rabbitmq.exchange_name')+").type("+settings.get('rabbitmq.exchange_type')+")")
+  log.info("Connecting to " + settings.get('rabbitmq.url') + ".exchange("+settings.get('rabbitmq.exchange_name')+").type("+settings.get('rabbitmq.exchange_type')+")")
 
-  var connection = new amqp.Connection("amqp://guest:guest@rabbitmq");
-  var topic = new amqp.Exchange(connection, "input", "topic", {durable: true, internal: false});
+  var connection = new amqp.Connection(settings.get('rabbitmq.url'));
+  var topic = new amqp.Exchange(connection, settings.get('rabbitmq.exchange_name'), settings.get('rabbitmq.exchange_type'), {durable: true, internal: false});
   var queue = connection.declareQueue('', {exclusive: true});
   queue.bind(topic, '*');
 

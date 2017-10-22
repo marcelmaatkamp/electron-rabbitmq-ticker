@@ -45,11 +45,11 @@ const template = [
       },
       {
         label: 'Preferences',
-        accelerator: 'Cmd+,',
-        click: () => windows.main.dispatch('preferences')
+                 accelerator: 'CmdOrCtrl+,',
+                 click: () => app.window.dispatch('preferences')
       },
       {
-        label: 'About ' + config.APP_NAME,
+        label: 'About ',
         role: 'about'
       }
     ]
@@ -96,3 +96,4 @@ if (process.platform === 'darwin') {
 
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
+console.log("menu created")
