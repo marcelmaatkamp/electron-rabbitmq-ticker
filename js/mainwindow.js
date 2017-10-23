@@ -1,6 +1,7 @@
 const {BrowserWindow} = require('electron')
 const url = require('url')
 const path = require('path')
+const menu = require("~/js/menu/main")
 
 window = new BrowserWindow({
   width: 600,
@@ -22,7 +23,6 @@ function createWindow () {
 }
 
 window.once('ready-to-show', () => {
-  require("~/js/menu/main")
   window.show()
 })
 

@@ -1,4 +1,6 @@
 const {app, Menu} = require('electron')
+const url = require('url')
+const path = require('path')
 const log = require('~/js/log.js')
 const template = [
   {
@@ -45,8 +47,12 @@ const template = [
       },
       {
         label: 'Preferences',
-                 accelerator: 'CmdOrCtrl+,',
-                 click: () => app.window.dispatch('preferences')
+        accelerator: 'CmdOrCtrl+,',
+        click: (menuItem, browserWindow, event) => browserWindow.loadURL(url.format({
+          pathname: path.join(__dirname, '../../html/preferences.html'),
+          protocol: 'file:',
+          slashes: true
+        }))
       },
       {
         label: 'About ',
