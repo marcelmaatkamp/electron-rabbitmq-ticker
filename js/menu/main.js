@@ -1,5 +1,5 @@
 const {app, Menu} = require('electron')
-
+const log = require('~/js/log.js')
 const template = [
   {
     label: 'Edit',
@@ -96,4 +96,4 @@ if (process.platform === 'darwin') {
 
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
-console.log("menu created")
+log.info("menu created")

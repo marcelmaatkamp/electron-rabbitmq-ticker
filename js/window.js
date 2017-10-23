@@ -1,18 +1,7 @@
 // Run this function after the page has loaded
 $(() => {
   const settings = require('electron-settings')
-
-  let Winston = require('winston');
-  Winston.remove(Winston.transports.Console);
-  const log = new Winston.Logger({
-    level: 'verbose',
-    transports: [
-      new Winston.transports.Console({
-        timestamp: true
-      })
-    ]
-  });
-
+  const log = require('~/js/log.js')
 
   var clock = $('.your-clock').FlipClock({
     clockFace: 'Counter',
@@ -24,9 +13,7 @@ $(() => {
     }
   });
 
-log
   var amqp = require('amqp-ts');
-
   log.info("Connecting to " + settings.get('rabbitmq.url') + ".exchange("+settings.get('rabbitmq.exchange_name')+").type("+settings.get('rabbitmq.exchange_type')+")")
 
   var connection = new amqp.Connection(settings.get('rabbitmq.url'));
